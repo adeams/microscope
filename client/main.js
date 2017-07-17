@@ -3,8 +3,6 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Meteor.subscribe('posts');
-
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
@@ -22,4 +20,3 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
-
